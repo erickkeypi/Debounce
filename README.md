@@ -6,7 +6,7 @@ Libreria de arduino para eliminar el rebote de los botones
 Se crea una instancia de la clase para cada botón con el pin donde se conecta este y el tiempo en milisegundos utillizado para eliminar el rebote. Si no se especifica un tiempo se toma 20 milisegundos como valor por defecto. 
 ```
 Debounce boton1 = Debounce(pin,tiempo);
-Debounce boton2 = Debounce(pin);
+Debounce boton2 = Debounce(pin); //20 ms por defecto
 ...
 ...
 ```
@@ -19,9 +19,9 @@ void loop() {
 }
 ```
 
-la variable `estado` es la que presenta el estado del boton sin el rebote.
+La variable `estado` es la que presenta el estado del boton sin el rebote.
 
-las variables `subida` y `bajada` son verdaderas cuando se presenta un flanco de subida o de bajada respectivamente.
+Las variables `subida` y `bajada` son verdaderas cuando se presenta un flanco de subida o de bajada respectivamente.
 
 #### Nota: Esta libreria activa la resistencia de pullup del pin usado
 
