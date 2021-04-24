@@ -30,17 +30,21 @@ void loop() {
 
 Representa el estado del botón sin rebote.
 
+
 ```boolean subida```
 
 Es verdadera cuando ocurre un flanco de subida.
+
 
 ```boolean bajada```
 
 Es verdadera cuando ocurre un flanco de bajada.
 
+
 ```boolean presionado```
 
 Es verdadera cuando el botón ha quedado en un estado específico luego de un tiempo específico. Este estado y tiempo específicos pueden cambiarse utilizando las funciones: `cambiarTiempoPresionado()` y `cambiarTriggerPresionado()`.
+
 
 ```boolean repeticion```
 
@@ -48,10 +52,40 @@ Cuando `presionado` es verdadero, esta variable cambia su valor a verdadero y lu
 
 ## Funciones
 
-```Debounce(pin, tiempo)```
+```Debounce(pin)```
+
 Constructor de la clase.
 
+
+```void begin()```
+
+Inicializa las variables y el pin utilizado.
+
+```void beginPullUp()```
+
+Inicializa las variable y el pin utilizado además de activar la resistencia pull up.
+
+
+```void cambiarTiempo(unsigned long _tiempo)```
+
+Cambia el tiempo de rebote
+
+```void cambiarTiempoPresionado(unsigned long _tiempo)```
+
+Cambia el tiempo utilizado para detectar que el botón se deja presionado y activar la varible `presionado`
+
+
+```void cambiarTiempoRepeticion(unsigned long _tiempo)```
+
+Cambia el tiempo utilizado para activar la variable `repetición`
+
+
+```void cambiarTriggerPresionado(bool _trigger)```
+
+Cambia el estado utilizado para detectar si el botón se deja presionado.
+
 ```void actualizar()```
+
 Actualiza el estado del botón.
 
 
