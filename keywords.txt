@@ -1,2 +1,13 @@
 Debounce	KEYWORD1
 estado	KEYWORD2
+subida	KEYWORD2
+bajada	KEYWORD2
+presionado	KEYWORD2
+repeticion	KEYWORD2
+begin	KEYWORD2
+beginPullUp	KEYWORD2
+cambiarTiempo	KEYWORD2
+cambiarTiempoPresionado	KEYWORD2
+cambiarTiempoRepeticion	KEYWORD2
+cambiarTriggerPresionado	KEYWORD2
+actualizar	KEYWORD2

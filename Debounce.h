@@ -26,19 +26,23 @@ limitations under the License.
 class Debounce{
 
 	public:
-		bool estado;
-		bool subida;
-		bool bajada;
+		bool estado, subida, bajada, presionado, repeticion;
 
-		Debounce(int _pin);
-		Debounce(int _pin, unsigned long _tiempo);
+    Debounce(int _pin);
+
+    void begin();
+    void beginPullUp();
+
+    void cambiarTiempo(unsigned long _tiempo);
+    void cambiarTiempoPresionado(unsigned long _tiempo);
+    void cambiarTiempoRepeticion(unsigned long _tiempo);
+    void cambiarTriggerPresionado(bool _trigger);
+
 		bool actualizar();
 
 	private:
-		float tiempo;
-		int espera;
-		bool actual;
-		bool anterior;
+		unsigned long espera, tiempoRepeticion, tiempoInicioRepeticion;
+		bool actual, anterior, repeticionActivada, triggerRepeticion;
 		int pin;
 
 };
