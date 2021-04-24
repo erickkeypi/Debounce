@@ -27,18 +27,23 @@ void loop() {
 ## Variables
 
 ```boolean estado```
+
 Representa el estado del botón sin rebote.
 
 ```boolean subida```
+
 Es verdadera cuando ocurre un flanco de subida.
 
 ```boolean bajada```
+
 Es verdadera cuando ocurre un flanco de bajada.
 
 ```boolean presionado```
+
 Es verdadera cuando el botón ha quedado en un estado específico luego de un tiempo específico. Este estado y tiempo específicos pueden cambiarse utilizando las funciones: `cambiarTiempoPresionado()` y `cambiarTriggerPresionado()`.
 
 ```boolean repeticion```
+
 Cuando `presionado` es verdadero, esta variable cambia su valor a verdadero y luego inmediatamente a falso siguiendo intervalo de tiempos específicos. Estos intervalos de tiempo pueden cambiarse usando la función `cambiarTiempoRepeticion()`
 
 ## Funciones
